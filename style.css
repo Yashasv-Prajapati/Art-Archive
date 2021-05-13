@@ -21,39 +21,62 @@ body{
     background-image:url('Pictures/background.jpg');
 }
 
-/* Nav bar styling */
+/* Topmost styling logo and tagline */
 
-.nav-wrapper{
-    /* display: block; */
-    height: 150px;
+.topmost{
+    /* position: absolute; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    height: 120px;
+}
+.topmost h1{
+    position: relative;
+    right: 100px;
+    width: 40vw;
+    /* top: 30px; */
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
     /* border: 1px solid red; */
 }
-
-nav{
-    margin-top: 20px;
-    padding-bottom: 20px;
-    height: 200px;
+.topmost .tagline{
+    display: flex;
+    position:relative;
+    right: 50px;
+    align-items: center;
+}
+.topmost .logo{
+   left: 100px;
+   padding: 5px;
+   margin: 15px 5px;
+   /* top: 5px; */
 }
 
+
+/* Topmost styling logo and tagline ends */
+
+/* Nav bar styling */
+
+nav{
+    margin: 20px 0px;
+    padding: 5px 0px;
+    height: 100px;
+}
+/* 
 nav .nav-btn, .nav-content{
     display: flex;
     flex-direction: column;
     align-items: right;
 }
-
+*/
+/*
 .nav-btn{
-    /* float: right; */
-    /* border: 1px solid red; */
     position: absolute;
     right: 10px;
-}
+} */
 
+/*
 .nav-btn button{
-    /* border: 1px solid red;     */
     background-color: hotpink;
     font-size: 1.5em;
     border-width: 0px;
@@ -63,7 +86,7 @@ nav .nav-btn, .nav-content{
     margin: 10px;
     border-radius: 3em;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.445), /* offset-x | offset-y | blur-radius | spread-radius | color */
-                2px 2px 2px 2px rgba(0, 0, 0, 0.116),
+/*                2px 2px 2px 2px rgba(0, 0, 0, 0.116),
                 -2px 2px 2px 2px rgba(0, 0, 0, 0.116);
 
 }
@@ -71,22 +94,44 @@ nav .nav-btn, .nav-content{
 .nav-btn button:hover{
     background-color: rgba(255, 105, 180, 0.685);
 }
-
+ */
 
 nav .nav-content{
-    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 1;
     z-index: -1;
-    height: 0px;
-    width: 0px;
 }
 
+.nav-content a{
+    text-decoration: none;
+    font-size: 1.5em;
+    width: 25%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    padding: 10px 10px;
+    background-color: burlywood;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 50px;
+}
+
+.nav-content a:hover{
+    background-color: rgba(222, 184, 135, 0.61);
+    color: black;
+}
+.nav-content a:visited{
+    color: purple;
+}
 /* Nav Bar ends */
 
 /* Logo */
 
 .logo{
-    height: 90%;
-    width: auto;
+    height: 100px;
+    width: 100px;
     border: 2px solid rgba(255, 0, 0, 0.308);
     box-shadow: 2px 0px 2px 2px rgba(160, 160, 160, 0.479);
     border-radius: 100%;
@@ -103,6 +148,9 @@ nav .nav-content{
 
 /* Logo ends */
 
+/* Our-goal */
+
+/* Our goal ends */
 /* Initial View Styling */
 
 
@@ -132,10 +180,33 @@ nav .nav-content{
 
 
 .initial-view img{
-    width: 90%;
-    height: 50%;
+    width: auto;
+    height: 80vh;
     border-radius: 0.75%;
 }
+.initial-view .w3-display-right{
+    position: absolute;
+    right: 20px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    background-color: rgba(160, 160, 160, 0.479);
+
+}
+.initial-view .w3-display-left{
+    position: absolute;
+    left: 20px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    background-color: rgba(160, 160, 160, 0.479);
+}
+.initial-view .w3-display-left:hover, .w3-display-right:hover{
+    background-color: rgba(160, 160, 160, 0.301);
+}
+
 /* Initial View ends */
 
 /* Genre pics styling */

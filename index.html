@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art-Archive</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Pictures/favicon.png" type="image/x-icon">
 
 
         <!--Architects Daughter font-->
@@ -24,10 +25,16 @@
 
 </head>
 <body>
+    <div class="topmost">
+        <div class="logo"><img src="Pictures/logo-alt-1png" alt="Art-Archive"></div>
+        <div class="tagline"><h1>Andi Bandi Shandi tagline</h1></div>
+    </div>
+    
+            
     <nav>
-        <div class="nav-wrapper">
-            <div class="logo"><img src="Pictures/logo.png" alt="Art-Archive"></div>
-            <div class="nav-btn"><button class="nav-button">Menu</button></div>
+        <!-- <div class="nav-wrapper"> -->
+            <!-- <div class="logo"><img src="Pictures/logo.png" alt="Art-Archive"></div> -->
+            <!-- <div class="nav-btn"><button class="nav-button">Menu</button></div> -->
             <div class="nav-content">
                 <a href="#">Home</a>
                 <a href="#">Genres</a>
@@ -39,9 +46,20 @@
         </div>
     </nav>
 
+    <section class="our-goal">
+        <div class="goal-content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic in officia sequi ea exercitationem repellat, excepturi voluptatem quasi rem, blanditiis est. Rerum dolores perspiciatis sint autem neque hic vero quam labore, quos facere debitis deleniti iusto ad placeat ut inventore porro reiciendis dignissimos animi expedita omnis corrupti maiores optio libero.repellat, excepturi voluptatem quasi rem, blanditiis est. Rerum dolores perspiciatis sint autem neque hic vero quam labore, quos facere debitis deleniti iusto ad placeat ut inventore porro reiciendis dignissimos animi expedita omnis corrupti maiores optio libero.repellat, excepturi voluptatem quasi rem, blanditiis est. Rerum dolores perspiciatis si</p></div>
+    </section>
+
     <section class="initial-view">
         <h2>New Additions</h2>
-        <div class="front-img-container"> <img src="Pictures/1.jpg" alt="New Photos"></div>
+        <div class="front-img-container"> 
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <img class="mySlides" src="Pictures/1.jpg" alt="New Photos">
+            <img class="mySlides" src="Pictures/2.jpg" alt="New Photos">
+            <img class="mySlides" src="Pictures/logo.png" alt="New Photos">
+            <img class="mySlides" src="Pictures/background.jpg" alt="New Photos">
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
         
     </section>
 
@@ -51,22 +69,15 @@
 
             <div class="parent">
                 <div class="child"><img src="Pictures/2.jpg" alt="..."> Anime</div>
-                <div class="child"><img src="Pictures/2.jpg" alt="...">Cartoon</div>
                 <div class="child"><img src="Pictures/2.jpg" alt="...">Nature</div>
                 <div class="child"><img src="Pictures/2.jpg" alt="...">Portraits</div>
             </div>
             <div class="parent">
                 <div class="child"><img src="Pictures/2.jpg" alt="...">Anime</div>
-                <div class="child"><img src="Pictures/2.jpg" alt="...">Cartoon</div>
                 <div class="child"><img src="Pictures/2.jpg" alt="...">Nature</div>
                 <div class="child"><img src="Pictures/2.jpg" alt="...">Portraits</div>
             </div>
-            <div class="parent">
-                <div class="child"><img src="Pictures/2.jpg" alt="...">Anime</div>
-                <div class="child"><img src="Pictures/2.jpg" alt="...">Cartoon</div>
-                <div class="child"><img src="Pictures/2.jpg" alt="...">Nature</div>
-                <div class="child"><img src="Pictures/2.jpg" alt="...">Portraits</div>
-            </div>
+            
 
         </div>
 
@@ -116,4 +127,26 @@
     </footer>
 
 </body>
+
+
+<script>
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+</script>
 </html>
